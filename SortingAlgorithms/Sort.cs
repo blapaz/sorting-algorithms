@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SortingAlgorithms
 {
@@ -12,13 +10,13 @@ namespace SortingAlgorithms
         /// <param name="values"></param>
         /// <param name="asc"></param>
         /// <returns></returns>
-        public int[] Insertion(int[] values, bool asc = true)
+        public int[] Insertion(int[] values)
         {
             for (int i = 0; i <= values.Length; i++)
             {
                 int j = i - 1;
 
-                while (j > 0 && (asc ? values[j - 1] > values[j] : values[j - 1] < values[j]))
+                while (j > 0 && (values[j - 1] > values[j]))
                 {
                     Swap(values, j, j - 1);
                     j--;
@@ -34,7 +32,7 @@ namespace SortingAlgorithms
         /// <param name="values"></param>
         /// <param name="asc"></param>
         /// <returns></returns>
-        public int[] Selection(int[] values, bool asc = true)
+        public int[] Selection(int[] values)
         {
             for (int i = 0; i < values.Length - 1; i++)
             {
@@ -42,7 +40,7 @@ namespace SortingAlgorithms
 
                 for (int j = i + 1; j < values.Length; j++)
                 {
-                    if (asc ? values[j] < values[min] : values[j] > values[min])
+                    if (values[j] < values[min])
                     {
                         min = j;
                     }
