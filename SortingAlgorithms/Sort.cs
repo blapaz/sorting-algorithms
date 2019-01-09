@@ -10,7 +10,7 @@ namespace SortingAlgorithms
         /// <param name="values"></param>
         /// <param name="asc"></param>
         /// <returns></returns>
-        public int[] Insertion(int[] values)
+        public static int[] Insertion(int[] values)
         {
             for (int i = 0; i <= values.Length; i++)
             {
@@ -32,7 +32,7 @@ namespace SortingAlgorithms
         /// <param name="values"></param>
         /// <param name="asc"></param>
         /// <returns></returns>
-        public int[] Selection(int[] values)
+        public static int[] Selection(int[] values)
         {
             for (int i = 0; i < values.Length - 1; i++)
             {
@@ -60,7 +60,7 @@ namespace SortingAlgorithms
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public int[] Merge(int[] values)
+        public static int[] Merge(int[] values)
         {
             if (values.Length <= 1)
                 return values;
@@ -95,7 +95,7 @@ namespace SortingAlgorithms
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        int[] MergeArrays(int[] left, int[] right)
+        static int[] MergeArrays(int[] left, int[] right)
         {
             int[] results = new int[left.Length + right.Length];
 
@@ -133,7 +133,7 @@ namespace SortingAlgorithms
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public int[] Bubble(int[] values)
+        public static int[] Bubble(int[] values)
         {
             for (int i = 0; i < values.Length - 1; i++)
             {
@@ -154,7 +154,7 @@ namespace SortingAlgorithms
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public int[] Comb(int[] values)
+        public static int[] Comb(int[] values)
         {
             int gap = values.Length;
             bool isSorted = false;
@@ -190,7 +190,7 @@ namespace SortingAlgorithms
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public int[] Reverse(int[] values)
+        public static int[] Reverse(int[] values)
         {
             int[] results = new int[values.Length];
             int i = values.Length - 1;
@@ -211,7 +211,7 @@ namespace SortingAlgorithms
         /// <param name="index1"></param>
         /// <param name="index2"></param>
         /// <returns></returns>
-        int[] Swap(int[] values, int index1, int index2)
+        static int[] Swap(int[] values, int index1, int index2)
         {
             int temp = values[index1];
             values[index1] = values[index2];

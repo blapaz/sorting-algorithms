@@ -16,8 +16,7 @@ namespace SortingAlgorithms
             Stopwatch watch = Stopwatch.StartNew();
 
             // Sort using selected sort method 
-            Sort sort = new Sort();
-            int[] sorted = sort.Comb(values);
+            int[] sorted = Sort.Comb(values);
 
             // Stop stopwatch
             watch.Stop();
