@@ -15,7 +15,7 @@ namespace SortingAlgorithms
             };
 
             Sort sort = new Sort();
-            int[] sorted = sort.Bubble(values);
+            int[] sorted = sort.Comb(values);
 
             watch.Stop();
 

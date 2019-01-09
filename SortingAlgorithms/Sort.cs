@@ -150,6 +150,42 @@ namespace SortingAlgorithms
         }
 
         /// <summary>
+        /// Sorts numbers using comb sort algorithm 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public int[] Comb(int[] values)
+        {
+            int gap = values.Length;
+            bool isSorted = false;
+
+            while (!isSorted)
+            {
+                gap = gap * 10 / 13;
+
+                if (gap <= 1)
+                {
+                    isSorted = true;
+                }
+
+                int i = 0;
+
+                while (i + gap < values.Length)
+                {
+                    if (values[i] > values[i + gap])
+                    {
+                        values = Swap(values, i, i + gap);
+                    }
+
+                    i++;
+                }
+
+            }
+
+            return values;
+        }
+
+        /// <summary>
         /// Swaps values of array to be in reverse
         /// </summary>
         /// <param name="values"></param>
