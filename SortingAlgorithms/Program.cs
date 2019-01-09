@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace SortingAlgorithms
 {
@@ -15,7 +15,7 @@ namespace SortingAlgorithms
             Sort sort = new Sort();
             int[] sorted = sort.Insertion(values);
 
-            foreach (var s in sorted) Console.Write(s + ", ");
+            Console.WriteLine(string.Join(",", values));
             Console.ReadLine();
         }
     }
