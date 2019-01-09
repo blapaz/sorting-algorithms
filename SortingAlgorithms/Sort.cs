@@ -28,7 +28,6 @@ namespace SortingAlgorithms
             return values;
         }
 
-
         /// <summary>
         /// Sorts numbers using selection sort algorithm 
         /// </summary>
@@ -59,6 +58,79 @@ namespace SortingAlgorithms
         }
 
         /// <summary>
+        /// Sorts numbers using merge sort algorithm 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public int[] Merge(int[] values)
+        {
+            if (values.Length <= 1)
+                return values;
+
+            int[] left = new int[values.Length / 2];
+            int[] right = new int[values.Length % 2 == 0 ? values.Length / 2 : values.Length / 2 + 1];
+
+            int lIndex = 0;
+            int rIndex = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (i < values.Length / 2)
+                {
+                    left[lIndex++] = values[i];
+                }
+                else
+                {
+                    right[rIndex++] = values[i];
+                }
+            }
+
+            left = Merge(left);
+            right = Merge(right);
+
+            return MergeArrays(left, right);
+        }
+
+        /// <summary>
+        /// Merges two arrays into one
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        int[] MergeArrays(int[] left, int[] right)
+        {
+            int[] results = new int[left.Length + right.Length];
+
+            int i = 0;
+            int lIndex = 0;
+            int rIndex = 0;
+
+            while (lIndex < left.Length && rIndex < right.Length)
+            {
+                if (left[lIndex] <= right[rIndex])
+                {
+                    results[i++] = left[lIndex++];
+                }
+                else
+                {
+                    results[i++] = right[rIndex++];
+                }
+            }
+
+            while (lIndex < left.Length)
+            {
+                results[i++] = left[lIndex++];
+            }
+
+            while (rIndex < right.Length)
+            {
+                results[i++] = right[rIndex++];
+            }
+
+            return results;
+        }
+
+        /// <summary>
         /// Swaps indexes of items in an array
         /// </summary>
         /// <param name="values"></param>
@@ -72,5 +144,6 @@ namespace SortingAlgorithms
             values[index2] = temp;
             return values;
         }
+
     }
 }
