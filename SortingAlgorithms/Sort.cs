@@ -13,8 +13,7 @@ namespace SortingAlgorithms
         /// <returns></returns>
         public int[] Insertion(int[] values, bool asc = true)
         {
-            int i = 1;
-            while (i <= values.Length)
+            for (int i = 0; i <= values.Length; i++)
             {
                 int j = i - 1;
 
@@ -27,8 +26,6 @@ namespace SortingAlgorithms
                     values[j - 1] = temp;
                     j--;
                 }
-
-                i++;
             }
             
             return values;
