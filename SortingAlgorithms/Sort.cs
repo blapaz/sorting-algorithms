@@ -10,6 +10,7 @@ namespace SortingAlgorithms
         /// Sorts numbers using insertion sort algorithm 
         /// </summary>
         /// <param name="values"></param>
+        /// <param name="asc"></param>
         /// <returns></returns>
         public int[] Insertion(int[] values, bool asc = true)
         {
