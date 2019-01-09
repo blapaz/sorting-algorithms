@@ -12,7 +12,7 @@ namespace SortingAlgorithms
             };
 
             Sort sort = new Sort();
-            int[] sorted = sort.Merge(values);
+            int[] sorted = sort.Reverse(sort.Merge(values));
 
             Console.WriteLine(string.Join(",", sorted));
             Console.ReadLine();

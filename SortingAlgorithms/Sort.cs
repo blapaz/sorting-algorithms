@@ -90,7 +90,7 @@ namespace SortingAlgorithms
         }
 
         /// <summary>
-        /// Merges two arrays into one
+        /// Combines two arrays into one
         /// </summary>
         /// <param name="left"></param>
         /// <param name="right"></param>
@@ -123,6 +123,20 @@ namespace SortingAlgorithms
             while (rIndex < right.Length)
             {
                 results[i++] = right[rIndex++];
+            }
+
+            return results;
+        }
+
+        public int[] Reverse(int[] values)
+        {
+            int[] results = new int[values.Length];
+            int i = values.Length - 1;
+            int index = 0;
+
+            while (i >= 0)
+            {
+                results[index++] = values[i--];
             }
 
             return results;
