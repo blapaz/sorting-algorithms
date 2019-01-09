@@ -13,7 +13,7 @@ namespace SortingAlgorithms
             };
 
             Sort sort = new Sort();
-            int[] sorted = sort.Insertion(values);
+            int[] sorted = sort.Selection(values);
 
             Console.WriteLine(string.Join(",", values));
             Console.ReadLine();
