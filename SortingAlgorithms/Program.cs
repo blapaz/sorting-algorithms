@@ -11,11 +11,11 @@ namespace SortingAlgorithms
 
             int[] values = new int[]
             {
-                9, 8, 7, 6, 5, 6, 4, 3, 2, 1, 0, 10
+                9, 8, 7, 6, 5, 6, 4, 3, 2, 1, 0, 2
             };
 
             Sort sort = new Sort();
-            int[] sorted = sort.Merge(values);
+            int[] sorted = sort.Bubble(values);
 
             watch.Stop();
 

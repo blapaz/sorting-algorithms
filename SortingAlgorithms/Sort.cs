@@ -18,7 +18,7 @@ namespace SortingAlgorithms
 
                 while (j > 0 && (values[j - 1] > values[j]))
                 {
-                    Swap(values, j, j - 1);
+                    values = Swap(values, j, j - 1);
                     j--;
                 }
             }
@@ -48,7 +48,7 @@ namespace SortingAlgorithms
 
                 if (min != i)
                 {
-                    Swap(values, i, min);
+                    values = Swap(values, i, min);
                 }
             }
 
@@ -126,6 +126,27 @@ namespace SortingAlgorithms
             }
 
             return results;
+        }
+
+        /// <summary>
+        /// Sorts numbers using bubble sort algorithm 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public int[] Bubble(int[] values)
+        {
+            for (int i = 0; i < values.Length - 1; i++)
+            {
+                for (int j = 0; j < values.Length - i - 1; j++)
+                {
+                    if (values[j] > values[j + 1])
+                    {
+                        values = Swap(values, j, j + 1);
+                    }
+                }
+            }
+
+            return values;
         }
 
         /// <summary>
