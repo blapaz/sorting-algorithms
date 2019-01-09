@@ -128,6 +128,11 @@ namespace SortingAlgorithms
             return results;
         }
 
+        /// <summary>
+        /// Swaps values of array to be in reverse
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
         public int[] Reverse(int[] values)
         {
             int[] results = new int[values.Length];
